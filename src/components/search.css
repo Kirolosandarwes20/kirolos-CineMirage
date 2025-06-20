@@ -1,0 +1,165 @@
+body.search-active {
+    overflow: hidden;
+    /* Disable scrolling on the body */
+}
+
+.mainSearchContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(0, 0, 0, 0.9);
+    z-index: 1000;
+    padding: 50px 20px;
+    box-sizing: border-box;
+    align-items: center;
+    overflow-y: auto;
+}
+
+.mainExitSearch {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    color: var(--secondary-color) !important;
+    border: 1px solid var(--secondary-color) !important;
+    background: rgb(59, 59, 59) !important;
+    border: none;
+}
+
+.mainExitSearch:hover {
+    box-shadow: 0 0 10px var(--secondary-color) !important;
+}
+
+.mainSearchInput {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.mainSearchInputField {
+    width: 90%;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    background-color: rgb(42, 42, 42);
+    border: none;
+    outline: none;
+}
+
+.mainSearchInputField::placeholder {
+    color: white;
+    opacity: 0.4;
+}
+
+.mainSearchInputField:focus {
+    border: none;
+    outline: none;
+    background-color: rgb(42, 42, 42);
+    color: white;
+    box-shadow: none;
+}
+
+.activesearch {
+    background-color: gray !important;
+
+}
+
+.search-btn {
+    color: var(--main-color) !important;
+    border: 1px solid var(--main-color) !important;
+    background: rgb(59, 59, 59) !important;
+}
+
+.search-btn:hover {
+    box-shadow: 0 0 10px var(--main-color) !important;
+}
+
+.mainSearchTypeBtns {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 30%;
+    height: auto;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+}
+
+.mainCardsGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: start;
+    gap: 10px;
+    padding: 10px;
+}
+
+.mainSearchCard {
+    width: 120px !important;
+    height: 180px !important;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.mainSearchCard img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+.mainSearchResults {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.search-cast-card {
+    width: 200px;
+}
+
+@media screen and (max-width: 768px) {
+    .mainSearchContainer {
+        padding: 20px 10px;
+    }
+
+    .mainExitSearch {
+        top: 10px;
+        right: 10px;
+        font-size: 16px;
+    }
+
+    .mainSearchInputField {
+        width: 70%;
+    }
+
+    .mainSearchTypeBtns {
+        width: 100%;
+        align-items: center;
+    }
+
+    .mainCardsGrid {
+        width: 100%;
+        gap: 8px;
+        /* Reduce gap further on mobile */
+    }
+
+    .mainSearchCard {
+        width: 100px;
+        /* Smaller width for mobile */
+        height: 150px;
+        /* Smaller height for mobile */
+    }
+}
