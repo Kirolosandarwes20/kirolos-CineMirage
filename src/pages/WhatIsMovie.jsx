@@ -10,7 +10,7 @@ export default function WhatIsMovie() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
-  const GROQ_API_KEY = "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"; 
+  const GROQ_API_KEY = "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"; 
 
   const guessMovie = async () => {
     if (!description.trim()) {
